@@ -2,16 +2,16 @@ package org.LP.solver;
 
 
 public class SimplexSolver {
-    private static double A[][]; //Matrix of coefficients
-    private static double C[]; // Objective Function coefficient
-    private static double b[];// RHS of the constraints
+    private static double[][] A; //Matrix of coefficients
+    private static double[] C; // Objective Function coefficient
+    private static double[] b;// RHS of the constraints
     private static int m; //number of constraints
     private static int n; //number of decision variables
-    private static double minimumRatio[];
+    private static double[] minimumRatio;
 
-    private static int basicVar[];
+    private static int[] basicVar;
 
-    private static double maximumRatio[]; //objective function coefficient
+    private static double[] maximumRatio; //objective function coefficient
     private static double result = -1;
     private static int idxOfIn = -1; //the index of the entering variable
     private static int idxOfOut = -1; //the index of the leaving variable
