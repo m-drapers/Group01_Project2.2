@@ -95,8 +95,12 @@ public class SimplexSolver {
                 index = i;
             }
         }
+        if (maximumRatio[index] <= 0) {
+            System.out.println("It is a unbounded problem");
+            return -1;
+        }
         System.out.println();
-        System.out.println("input variable is" + (index+1));
+        System.out.println("input variable is " + (index+1));
         return index;
     }
 
