@@ -9,6 +9,7 @@ public class SimplexSolver {
     private static int n; //number of decision variables
     private static double minimumRatio[];
 
+
     private static int basicVar[];
 
     private static double maximumRatio[]; //objective function coefficient
@@ -16,7 +17,7 @@ public class SimplexSolver {
     private static int idxOfIn = -1; //the index of the entering variable
     private static int idxOfOut = -1; //the index of the leaving variable
 
-    public void SimplexSolver(double[][] A, double[] C, double[] b) {
+    public double SimplexSolver(double[][] A, double[] C, double[] b) {
         this.A = A;
         this.C = C;
         this.b = b;
@@ -32,12 +33,13 @@ public class SimplexSolver {
             printVector();
             idxOfOut = getVariableOut();
             if(idxOfOut == -1)
-                return;
+                return -1;
             updateVectors();
             printVector();
             System.out.println("\n");
         }
         printOptimum();
+        return result;
     }
     private static void printVector() {
         for (int i = 0; i < m; i++) {
