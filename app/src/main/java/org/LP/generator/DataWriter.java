@@ -16,11 +16,36 @@ public class DataWriter {
     static String password = "meow";
 
     static final String sqlFilePath = "app/src/main/java/org/LP/generator/data.sql";
-    int numOfHouses = 100;
-    int numOfStudents = 200; 
+
+    //housing peramiters
+    static int numOfHouses = 12;
+    static int numOfStudents = 10; 
+    static StudentData data = new StudentData(numOfStudents);
+
+
+    //wykys
+   static Wyck amby = new Wyck("Amby", 400.0, 750.0, 6.2, 7.0);
+   static Wyck biesland = new Wyck("Biesland", 430.0, 700.0, 4.7, 5.5);
+   static Wyck binnenstad = new Wyck("Binnenstad", 430.0, 800.0, 3.9, 4.6);
+   static Wyck borgharen = new Wyck("Borgharen", 400.0, 750.0, 8.1, 9.0);
+   static Wyck boschpoort = new Wyck("Boschpoort", 400.0, 800.0, 6.1, 6.9);
+   static Wyck boschstraatkwartier = new Wyck("Boschstraatkwartier", 430.0, 800.0, 4.7, 5.7);
+   static Wyck heer = new Wyck("Heer", 430.0, 850.0, 2.4, 2.8);
+   static Wyck itteren = new Wyck("Itteren", 400.0, 700.0, 10.0, 10.7);
+   static Wyck jekerkwartier = new Wyck("Jekerkwartier", 450.0, 850.0, 3.3, 4.1);
+   static Wyck sintPieter = new Wyck("Sint Pieter", 400.0, 800.0, 5.5, 6.1);
+   static Wyck villapark = new Wyck("Villapark", 450.0, 850, 3.7, 4.0);
+   static Wyck wyck = new Wyck("Wyck", 400.0, 900.0, 3.5, 4.1);
+   static Wyck[] wycks = {amby, biesland, binnenstad, borgharen, boschpoort,boschstraatkwartier, heer, itteren, jekerkwartier, sintPieter, villapark, wyck};
     
+   //file writer
+   //static FileWriter writer;
+
     public static void main(String[] args) {
+
        createSQLFile();
+       generateHouseData();
+       generateStudentData();
        checkConnectionDB();
        fileToDatabase();
         
@@ -40,11 +65,47 @@ public class DataWriter {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //checkWrittenData();
-        //checkDataBase();
     }
 
-    public static void generateData(){
+    public static void generateHouseData(){
+        int numberOfUnits = numOfHouses/wycks.length;
+        System.out.println("num: " + numberOfUnits );
+        try {
+        FileWriter writer = new FileWriter(sqlFilePath, true);
+        for(int i = 0; i < wycks.length; i++ ){
+            Wyck current = wycks[i];
+            int count = 0;
+            while(count < numberOfUnits){
+                double price = current.generateRandomPrice();
+                double distance = current.generateRandomPrice();
+                int units = current.generateNumberOfUnits();
+                String insertQuery = "INSERT INTO Houses (Price, Distance, Places) VALUES (" + price+ "," + distance +"," + units+ ")\n";
+                writer.write(insertQuery);
+                count += units;
+            }
+        }
+        writer.close();
+        System.out.println("housing data has been written to data.sql");
+    }catch (IOException e) {
+        e.printStackTrace();
+    }
+    }
+
+    public static void generateStudentData(){
+        try {
+            FileWriter writer = new FileWriter(sqlFilePath, true);
+            for(int i = 0; i < numOfStudents; i++){
+                double budget = data.generateRandomPreferencesPrice();
+                double maxDistance = data.generateRandomPreferencesDistance();
+                String insertQuery = "INSERT INTO Students (Budget, MaxDis) VALUES (" + budget +"," + maxDistance +") \n";
+                writer.write(insertQuery);
+            }
+            
+            writer.close();
+            System.out.println("student data has been written to data.sql");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -54,6 +115,7 @@ public class DataWriter {
                 file.delete(); // delete the existing file
             }
             file.createNewFile(); //recreate the file
+            System.out.println("File reset successfully");
         }
     
   
@@ -72,8 +134,6 @@ public class DataWriter {
     }
 
     public static void checkConnectionDB(){
-
-
         try (Connection connection = DriverManager.getConnection(url, user, password)) {
             System.out.println("Connected to the database!");
         } catch (SQLException e) {
