@@ -228,7 +228,7 @@ public class BigM {
     private static void printOptimum() {
         result = 0;
         for (int i = 0; i < basicVar.length; i++) {
-            if (basicVar[i] <= m)
+            if (basicVar[i] <= numOriginalVar)
                 result += c[basicVar[i] - 1] * b[i];
         }
         System.out.println("Optimum：z = " + result);
