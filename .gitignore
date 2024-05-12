@@ -29,3 +29,8 @@ replay_pid*
 # Ignore Gradle build output directory
 build
 .vscode/settings.json
+app/src/main/java/org/LP/.DS_Store
+app/src/main/.DS_Store
+app/src/main/java/org/.DS_Store
+app/.DS_Store
+.DS_Store
