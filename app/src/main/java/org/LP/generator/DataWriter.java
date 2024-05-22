@@ -20,8 +20,8 @@ public class DataWriter {
     static final String sqlFilePath = util.getSqlFilePath();
 
     //housing peramiters
-    static int numOfHouses = 25;
-    static int numOfStudents = 25; 
+    static int numOfHouses = 300;
+    static int numOfStudents = 300; 
     static StudentData data = new StudentData(numOfStudents);
 
 
@@ -77,7 +77,7 @@ public class DataWriter {
             int count = 0;
             while(count < numberOfUnits){
                 double price = current.generateRandomPrice();
-                double distance = current.generateRandomPrice();
+                double distance = current.generateRandomDistance();
                 int units = current.generateNumberOfUnits();
                 String insertQuery = "INSERT INTO Houses (Price, Distance, Places) VALUES (" + price+ "," + distance +"," + units+ ")\n";
                 writer.write(insertQuery);
