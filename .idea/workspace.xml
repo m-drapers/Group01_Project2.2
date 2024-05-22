@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7fd10f1-c798-4b24-987a-0f055be75486" name="Changes" comment="update a Junit test of Simplex Method" />
+    <list default="true" id="d7fd10f1-c798-4b24-987a-0f055be75486" name="Changes" comment="update a Junit test of Simplex Method">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_1_2024_10_07_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_1_2024_10_07_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/bigMTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/org/LP/SimplexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/org/LP/SimplexTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +19,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -40,12 +55,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Group01_Project2.2:app [:app:Main.main()].executor": "Debug",
-    "Gradle.Group01_Project2.2:app [:app:SimplexSolverTest.main()].executor": "Debug",
+    "Gradle.Group01_Project2.2:app [:app:SimplexSolverTest.main()].executor": "Run",
     "Gradle.Group01_Project2.2:app [:app:main.main()].executor": "Debug",
     "Gradle.SimplexTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "simplex__method1",
+    "git-widget-placeholder": "compile",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/IntelliJ IDEA 2023.3.4/Project",
     "node.js.detected.package.eslint": "true",
@@ -60,7 +75,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.SimplexTest">
+  <component name="RunManager" selected="Application.SimplexSolverTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.LP.Main" />
       <module name="Group01_Project2.2.app.main" />
@@ -190,7 +205,7 @@
     <MESSAGE value="a simple simplex solver, I use the exercise question to test" />
     <MESSAGE value="update a conditional statement" />
     <MESSAGE value="update a Junit test of Simplex Method" />
-    <option name="LAST_COMMIT_MESSAGE" value="update a Junit test of Simplex Method" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
