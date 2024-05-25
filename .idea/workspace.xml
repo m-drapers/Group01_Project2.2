@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7fd10f1-c798-4b24-987a-0f055be75486" name="Changes" comment="update a Junit test of Simplex Method">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/BranchAndBoundSortedArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/BranchAndBoundSortedArrayTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/BranchAndBound.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/BranchAndBound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/BranchAndBoundTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/BranchAndBoundTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +76,20 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.BranchAndBoundTest">
+  <component name="RunManager" selected="Application.BranchAndBoundSortedArrayTest">
+    <configuration name="BranchAndBoundSortedArrayTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.LP.solver.BranchAndBoundSortedArrayTest" />
+      <module name="Group01_Project2.2.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.LP.solver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BranchAndBoundTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.LP.solver.BranchAndBoundTest" />
       <module name="Group01_Project2.2.app.main" />
@@ -155,6 +168,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BranchAndBoundSortedArrayTest" />
         <item itemvalue="Application.BranchAndBoundTest" />
         <item itemvalue="Application.SimplexSolverTest" />
         <item itemvalue="Application.main" />
@@ -186,6 +200,8 @@
       <workItem from="1714550647500" duration="297000" />
       <workItem from="1716366546753" duration="272000" />
       <workItem from="1716367935501" duration="2532000" />
+      <workItem from="1716639139811" duration="8226000" />
+      <workItem from="1716669875429" duration="3539000" />
     </task>
     <task id="LOCAL-00001" summary="a simple simplex solver, I use the exercise question to test">
       <option name="closed" value="true" />
@@ -247,11 +263,25 @@
           <line>60</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/BranchAndBoundSortedArrayTest.java</url>
+          <line>4</line>
+          <properties class="org.LP.solver.BranchAndBoundSortedArrayTest" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Group01_Project2_2$BranchAndBoundSortedArrayTest.ic" NAME="BranchAndBoundSortedArrayTest Coverage Results" MODIFIED="1716667771295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.LP.solver.*</FILTER>
+    </SUITE>
   </component>
 </project>
