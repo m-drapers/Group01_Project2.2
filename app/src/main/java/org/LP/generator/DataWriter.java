@@ -11,6 +11,7 @@ import java.util.List;
 
 
 
+
 public class DataWriter {
     //sql connection
     static String url = util.getUrl();
@@ -22,24 +23,35 @@ public class DataWriter {
     //housing peramiters
     static int numOfHouses = 300;
     static int numOfStudents = 300; 
-    static StudentData data = new StudentData(numOfStudents);
 
 
     //wykys
-   static Wyck amby = new Wyck("Amby", 400.0, 750.0, 6.2, 7.0);
-   static Wyck biesland = new Wyck("Biesland", 430.0, 700.0, 4.7, 5.5);
-   static Wyck binnenstad = new Wyck("Binnenstad", 430.0, 800.0, 3.9, 4.6);
-   static Wyck borgharen = new Wyck("Borgharen", 400.0, 750.0, 8.1, 9.0);
-   static Wyck boschpoort = new Wyck("Boschpoort", 400.0, 800.0, 6.1, 6.9);
-   static Wyck boschstraatkwartier = new Wyck("Boschstraatkwartier", 430.0, 800.0, 4.7, 5.7);
-   static Wyck heer = new Wyck("Heer", 430.0, 850.0, 2.4, 2.8);
-   static Wyck itteren = new Wyck("Itteren", 400.0, 700.0, 10.0, 10.7);
-   static Wyck jekerkwartier = new Wyck("Jekerkwartier", 450.0, 850.0, 3.3, 4.1);
-   static Wyck sintPieter = new Wyck("Sint Pieter", 400.0, 800.0, 5.5, 6.1);
-   static Wyck villapark = new Wyck("Villapark", 450.0, 850, 3.7, 4.0);
-   static Wyck wyck = new Wyck("Wyck", 400.0, 900.0, 3.5, 4.1);
-   static Wyck[] wycks = {amby, biesland, binnenstad, borgharen, boschpoort,boschstraatkwartier, heer, itteren, jekerkwartier, sintPieter, villapark, wyck};
-    
+   static final WyckData amby = new WyckData("Amby", 400.0, 750.0, 6.2, 7.0);
+   static final WyckData biesland = new WyckData("Biesland", 430.0, 700.0, 4.7, 5.5);
+   static final WyckData binnenstad = new WyckData("Binnenstad", 430.0, 800.0, 3.9, 4.6);
+   static final WyckData borgharen = new WyckData("Borgharen", 400.0, 750.0, 8.1, 9.0);
+   static final WyckData boschpoort = new WyckData("Boschpoort", 400.0, 800.0, 6.1, 6.9);
+   static final WyckData boschstraatkwartier = new WyckData("Boschstraatkwartier", 430.0, 800.0, 4.7, 5.7);
+   static WyckData heer = new WyckData("Heer", 430.0, 850.0, 2.4, 2.8);
+   static WyckData itteren = new WyckData("Itteren", 400.0, 700.0, 10.0, 10.7);
+   static WyckData jekerkwartier = new WyckData("Jekerkwartier", 450.0, 850.0, 3.3, 4.1);
+   static WyckData sintPieter = new WyckData("Sint Pieter", 400.0, 800.0, 5.5, 6.1);
+   static WyckData villapark = new WyckData("Villapark", 450.0, 850, 3.7, 4.0);
+   static WyckData wyck = new WyckData("Wyck", 400.0, 900.0, 3.5, 4.1);
+   static WyckData[] wycks = {amby, biesland, binnenstad, borgharen, boschpoort,boschstraatkwartier, heer, itteren, jekerkwartier, sintPieter, villapark, wyck};
+
+   //student budget ratios/ranges
+    static final int[] priceRangesLower = {100, 300, 500, 700, 900};
+    static final int[] priceRangesHigher = {300, 500, 700, 900, 1200};
+    static final double[] priceRatios = {2.1, 51.1, 40.3, 4.3, 2.1};
+   //student max distance ratios/ranges
+    static final int[] maxDisRangesLower = {5, 10, 20, 30, 40};
+    static final int[] maxDisRangesHigher = {10, 20, 30, 40, 50};
+    static final double[] maxDisRatios = {74.5, 23.4, 2.1, 0, 0};
+
+    static StudentData data = new StudentData(numOfStudents, priceRangesHigher, priceRangesLower, priceRatios, maxDisRangesHigher, maxDisRangesLower, maxDisRatios);
+
+
 
     public static void main(String[] args) {
 
@@ -68,35 +80,59 @@ public class DataWriter {
         }
     }
 
-    public static void generateHouseData(){
-        int numberOfUnits = numOfHouses/wycks.length;
+    public static void generateHouseData() {
+        int totalGeneratedUnits = 0;
+        int numberOfWycks = wycks.length;
         try {
-        FileWriter writer = new FileWriter(sqlFilePath, true);
-        for(int i = 0; i < wycks.length; i++ ){
-            Wyck current = wycks[i];
-            int count = 0;
-            while(count < numberOfUnits){
-                double price = current.generateRandomPrice();
-                double distance = current.generateRandomDistance();
-                int units = current.generateNumberOfUnits();
-                String insertQuery = "INSERT INTO Houses (Price, Distance, Places) VALUES (" + price+ "," + distance +"," + units+ ")\n";
-                writer.write(insertQuery);
-                count += units;
+            FileWriter writer = new FileWriter(sqlFilePath, true);
+            for (int i = 0; i < numberOfWycks; i++) {
+                WyckData current = wycks[i];
+                int unitsToGenerate = numOfHouses / numberOfWycks;
+                
+                // For the last iteration, ensure we cover any remaining units
+                if (i == numberOfWycks - 1) {
+                    unitsToGenerate = numOfHouses - totalGeneratedUnits;
+                }
+                
+                int count = 0;
+                while (count < unitsToGenerate) {
+                    double price = current.generateRandomPrice();
+                    double distance = current.generateRandomDistance();
+                    
+                    // Generate a unit number that does not exceed unitsToGenerate
+                    int units = current.generateNumberOfUnits();
+                    if (count + units > unitsToGenerate) {
+                        units = unitsToGenerate - count;
+                    }
+                    
+                    String insertQuery = "INSERT INTO Houses (Price, Distance, Places) VALUES (" + price + "," + distance + "," + units + ") \n";
+                    writer.write(insertQuery);
+                    count += units;
+                    totalGeneratedUnits += units;
+                    
+                    // Break if we have generated the required number of houses
+                    if (totalGeneratedUnits >= numOfHouses) {
+                        break;
+                    }
+                }
             }
+            writer.close();
+            System.out.println("housing data has been written to data.sql");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        writer.close();
-        System.out.println("housing data has been written to data.sql");
-    }catch (IOException e) {
-        e.printStackTrace();
-    }
-    }
+    } // Closing brace for the method
+    
+    
 
     public static void generateStudentData(){
         try {
             FileWriter writer = new FileWriter(sqlFilePath, true);
+            List<Double> prices = data.generateRandomPreferencesPrice();
+            List<Double> distances = data.generateRandomPreferencesDistance();
             for(int i = 0; i < numOfStudents; i++){
-                double budget = data.generateRandomPreferencesPrice();
-                double maxDistance = data.generateRandomPreferencesDistance();
+                double budget = prices.get(i);
+                double maxDistance = distances.get(i);
                 String insertQuery = "INSERT INTO Students (Budget, MaxDis) VALUES (" + budget +"," + maxDistance +") \n";
                 writer.write(insertQuery);
             }

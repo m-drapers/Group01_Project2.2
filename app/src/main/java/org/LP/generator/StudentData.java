@@ -4,13 +4,32 @@ package org.LP.generator;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class StudentData {
     private int numOfStudnet;
+
+    private  int[] priceRangesLower;
+    private  int[] priceRangesHigher;
+    private   double[] priceRatios;
+
+    private  int[] maxDisRangesLower = {5, 10, 20, 30, 40};
+    private  int[] maxDisRangesHigher = {10, 20, 30, 40, 50};
+    private double[] maxDisRatios = {74.5, 23.4, 2.1, 0, 0};
     
 
-    public StudentData( int numOfStudnet ) {
+    public StudentData(int numOfStudnet, int[] priceRangesHigher, int[] priceRangesLower, double[] priceRatios, int[] maxDisRangesHigher, int[] maxDisRangesLower, double[] maxDisRatios ) {
         this.numOfStudnet = numOfStudnet;
+
+        this.priceRangesHigher = priceRangesHigher;
+        this.priceRangesLower = priceRangesLower;
+        this.priceRatios = priceRatios;
+
+        this.maxDisRangesHigher = maxDisRangesHigher;
+        this.maxDisRangesLower = maxDisRangesLower;
+        this.maxDisRatios = maxDisRatios;
     }
 
     public int getNumOfStudnet(){
@@ -23,38 +42,46 @@ public class StudentData {
 
 
     // Method to generate random preferences based on given percentages
-    public double generateRandomPreferencesPrice() {
-        Random random = new Random();
-        double pricePercentage = random.nextDouble() * 100;
-        double maxPrice = 0;
+    public List<Double> generateRandomPreferencesPrice() {
+        return generateData(numOfStudnet, priceRangesLower, priceRangesHigher, priceRatios);
 
-        if (pricePercentage < 2.1) {
-            maxPrice = 300;
-        } else if (pricePercentage < 53.2) {
-            maxPrice = 500;
-        } else if (pricePercentage < 93.5) {
-            maxPrice = 700;
-        } else{
-            maxPrice = 900;}
-        return maxPrice;
     }
     // Method to generate random preferences based on given percentages
-    public double generateRandomPreferencesDistance() {
-        Random random = new Random();
-        double distancePercentage = random.nextDouble() * 100;
-        double maxDistance = 0;
+    public List<Double> generateRandomPreferencesDistance() {
+      return generateData(numOfStudnet, maxDisRangesLower, maxDisRangesHigher, maxDisRatios);
+    }
 
-        if (distancePercentage < 74.5) {
-            maxDistance = 10;
-        } else if (distancePercentage < 97.9) {
-            maxDistance = 20;
-        } else if (distancePercentage < 100) {
-            maxDistance = 30;
-        } else {
-            maxDistance = Double.MAX_VALUE;
+    private static List<Double> generateData(int numSamples, int[] lowerRange, int[] upperRange, double[] ratios) {
+        Random random = new Random();
+        List<Double> generatedData = new ArrayList<>();
+        int totalSamplesAllocated = 0;
+
+        // Calculate the number of samples for each range
+        int[] rangeSamples = new int[lowerRange.length];
+        for (int i = 0; i < lowerRange.length; i++) {
+            double rangeRatio = ratios[i] / 100.0; // Convert percentage to ratio
+            rangeSamples[i] = (int) Math.round(numSamples * rangeRatio);
+            totalSamplesAllocated += rangeSamples[i];
         }
 
-        return maxDistance;
+        // Adjust the last range to ensure the total number of samples is exactly numSamples
+        int difference = numSamples - totalSamplesAllocated;
+        if (difference != 0) {
+            rangeSamples[rangeSamples.length - 1] += difference;
+        }
+
+        // Generate random numbers for each range
+        for (int i = 0; i < lowerRange.length; i++) {
+            for (int j = 0; j < rangeSamples[i]; j++) {
+                double lowerBound = lowerRange[i];
+                double upperBound = upperRange[i];
+
+                double randomNum = lowerBound + (upperBound - lowerBound) * random.nextDouble();
+                randomNum = Math.round(randomNum * 100.0) / 100.0;
+                generatedData.add(randomNum);
+            }
+        }
+        return generatedData;
     }
 }
 

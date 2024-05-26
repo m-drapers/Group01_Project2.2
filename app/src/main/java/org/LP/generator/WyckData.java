@@ -3,14 +3,14 @@ package org.LP.generator;
 
     import java.sql.*;
 
-    public class Wyck {
+    public class WyckData {
         private String name;
         private double minPrice;
         private double maxPrice;
         private double minDista;
         private double maxDista;
     
-        public Wyck(String name, double minPrice, double maxPrice, double minDista, double maxDista) {
+        public WyckData(String name, double minPrice, double maxPrice, double minDista, double maxDista) {
             this.name = name;
             this.minPrice = minPrice;
             this.maxPrice = maxPrice;
