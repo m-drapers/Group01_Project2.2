@@ -57,7 +57,7 @@ public class LogicBasedSolver {
                 //Check if the student can be placed in a house which is already full
                 //Then we have to reallocate some other student(s)
                 for (int j = 0; j < i; j++) {
-                    if (students[j][0] >= houses[solution[houseNumber]][0] & students[j][1] >= houses[solution[j]][1] & violationDistance) {
+                    if (students[j][0] >= houses[solution[houseNumber]][0] && students[j][1] >= houses[solution[houseNumber]][1] && students[i][1] >= houses[solution[j]][1] && violationDistance) {
                         newHouseNumber = solution[j];
                         solution[j] = houseNumber;
                         costs[j] = houses[houseNumber][0];
@@ -95,6 +95,11 @@ public class LogicBasedSolver {
                 costs[i] = houses[newHouseNumber][0];
                 placesTaken[newHouseNumber]++;
 
+            }
+
+            //The house is full, move to the next house
+            if (houses[houseNumber][2] == placesTaken[houseNumber]) {
+                houseNumber++;
             }
         }
 

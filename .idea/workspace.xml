@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7fd10f1-c798-4b24-987a-0f055be75486" name="Changes" comment="update a Junit test of Simplex Method">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java" afterDir="false" />
@@ -55,31 +54,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Group01_Project2.2:app [:app:Main.main()].executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.Group01_Project2.2:app [:app:SimplexSolverTest.main()].executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.Group01_Project2.2:app [:app:main.main()].executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.SimplexTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;BigM__method&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IntelliJ IDEA 2023.3.4/Project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Group01_Project2.2:app [:app:Main.main()].executor": "Debug",
+    "Gradle.Group01_Project2.2:app [:app:SimplexSolverTest.main()].executor": "Debug",
+    "Gradle.Group01_Project2.2:app [:app:main.main()].executor": "Debug",
+    "Gradle.SimplexTest.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "android.gradle.sync.needed": "true",
+    "git-widget-placeholder": "BigM__method",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/IntelliJ IDEA 2023.3.4/Project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.LogicBasedSolverTest">
     <configuration name="BranchAndBoundSortedArrayTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.LP.solver.BranchAndBoundSortedArrayTest" />
@@ -209,6 +209,8 @@
       <workItem from="1716715201370" duration="5485000" />
       <workItem from="1716805326496" duration="5927000" />
       <workItem from="1716820540454" duration="1451000" />
+      <workItem from="1716822187461" duration="58000" />
+      <workItem from="1716822318127" duration="2190000" />
     </task>
     <task id="LOCAL-00001" summary="a simple simplex solver, I use the exercise question to test">
       <option name="closed" value="true" />
@@ -278,6 +280,9 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Group01_Project2_2$LogicBasedSolverTest.ic" NAME="LogicBasedSolverTest Coverage Results" MODIFIED="1716823137712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.LP.solver.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Group01_Project2_2$BranchAndBoundSortedArrayTest.ic" NAME="BranchAndBoundSortedArrayTest Coverage Results" MODIFIED="1716816499178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.LP.solver.*</FILTER>
     </SUITE>
