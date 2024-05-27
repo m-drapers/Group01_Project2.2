@@ -70,6 +70,9 @@ public class LogicBasedSolver {
                 //Check if the student can be placed in a house which is already full
                 //Then we have to reallocate some other student(s)
                 for (int j = 0; j < i; j++) {
+                    System.out.println(i);
+                    System.out.println(j);
+                    System.out.println(solution[j]);
                     if (students[j][0] >= houses[houseNumber][0] && students[j][1] >= houses[houseNumber][1] && students[i][1] >= houses[j][1] && violationDistance) {
                         newHouseNumber = solution[j];
                         solution[j] = houseNumber;

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7fd10f1-c798-4b24-987a-0f055be75486" name="Changes" comment="update a Junit test of Simplex Method">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java" afterDir="false" />
@@ -213,6 +214,7 @@
       <workItem from="1716822318127" duration="2190000" />
       <workItem from="1716824558907" duration="257000" />
       <workItem from="1716828258617" duration="8394000" />
+      <workItem from="1716838411202" duration="2031000" />
     </task>
     <task id="LOCAL-00001" summary="a simple simplex solver, I use the exercise question to test">
       <option name="closed" value="true" />
@@ -273,6 +275,15 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/SimplexSolver.java</url>
           <line>60</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java</url>
+          <line>4</line>
+          <properties class="org.LP.solver.LogicBasedSolverTest" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
