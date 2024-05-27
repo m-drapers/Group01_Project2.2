@@ -11,6 +11,19 @@ public class LogicBasedSolver {
         LogicBasedSolver.students = students;
         LogicBasedSolver.houses = houses;
 
+        //Check if there are more available room than the number of students to allocate
+        int availableHouses = 0;
+
+        for (double[] house : houses) {
+            availableHouses += (int) house[2];
+        }
+
+        if (availableHouses < students.length) {
+            System.out.println("There are more students than available houses.");
+            System.out.println("There is no valid solution.");
+            return -1;
+        }
+
         //Create a solution space
         int[] solution = new int[students.length];
         double[] costs = new double[students.length];
@@ -57,7 +70,10 @@ public class LogicBasedSolver {
                 //Check if the student can be placed in a house which is already full
                 //Then we have to reallocate some other student(s)
                 for (int j = 0; j < i; j++) {
-                    if (students[j][0] >= houses[solution[houseNumber]][0] && students[j][1] >= houses[solution[houseNumber]][1] && students[i][1] >= houses[solution[j]][1] && violationDistance) {
+                    System.out.println(i);
+                    System.out.println(j);
+                    System.out.println(solution[j]);
+                    if (students[j][0] >= houses[houseNumber][0] && students[j][1] >= houses[houseNumber][1] && students[i][1] >= houses[j][1] && violationDistance) {
                         newHouseNumber = solution[j];
                         solution[j] = houseNumber;
                         costs[j] = houses[houseNumber][0];
@@ -67,38 +83,37 @@ public class LogicBasedSolver {
                     }
                 }
 
-                //Check if the student can be placed in a more expensive house
-                while (violationDistance) {
-                    while (placesTaken[newHouseNumber] >= houses[newHouseNumber][2]) {
+                //Check if the student can be placed in a more expensive house if a previous full house was not possible
+                    while (violationDistance && placesTaken[newHouseNumber] <= houses[newHouseNumber][2]) {
                         newHouseNumber++;
+
                         //Check if there are no more houses left and thus the student cannot be placed
                         if (newHouseNumber >= houses.length) {
                             System.out.println("Student " + i + " cannot be placed into a house.");
                             System.out.println("There is no valid solution. (violation Distance)");
                             return -1;
                         }
+
                         if (students[i][1] >= houses[newHouseNumber][1]) {
                             violationDistance = false;
                         }
+
                         //Houses become more expensive after this one, so if the found one is not affordable all the upcoming wil also not be affordable
                         if (students[i][0] < houses[newHouseNumber][0]) {
                             System.out.println("Student " + i + " cannot be placed into a house.");
                             System.out.println("There is no valid solution. (violation Distance --> violation Budget)");
                             return -1;
                         }
-                    }
-
                 }
 
                 //If the Distance restriction is satisfied the student will be placed into the available house
                 solution[i] = newHouseNumber;
                 costs[i] = houses[newHouseNumber][0];
                 placesTaken[newHouseNumber]++;
-
             }
 
             //The house is full, move to the next house
-            if (houses[houseNumber][2] == placesTaken[houseNumber]) {
+            while ((int) houses[houseNumber][2] == placesTaken[houseNumber] && i + 1 != students.length) {
                 houseNumber++;
             }
         }
@@ -116,5 +131,4 @@ public class LogicBasedSolver {
         System.out.println("result: " + result);
         return result;
     }
-
 }
