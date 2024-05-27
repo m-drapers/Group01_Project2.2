@@ -10,9 +10,16 @@ This project aims to optimize the assignment of housing to students based on var
 - Minimization of overall housing prices for students.
 - Minimization of overall distances between assigned housing and the university.
 
+## Differnent Solvers
+- Logic Based Solver
+- Branch and Bound Solver (Not Yet Complete)
+    - Big M Solver 
+    - Simplex Solver
+- Branch and Cut Solver (To Be Implemented)
 ## Usage
 
 1. Clone the repository
-2. Build the project using Gradle
-3. Run the application
+2. Go to app/src/main/java/org/LP/solver
+3. Run any file labled *Test* to see the solver at work
+
 
