@@ -5,13 +5,18 @@ public class BranchAndBound {
     private static double[][] A; //Matrix of coefficients
     private static double[] C; // Objective Function coefficient
     private static double[] b;// RHS of the constraints
+    private static int numOfArtificialVar;
+    private static int[] bigMConstraint;
 
     private static int number_of_variables;
 
-    public double BranchAndBound(double[][] A, double[] C, double[] b) {
+    public double BranchAndBound(double[][] A, double[] C, double[] b, int numOfArtificialVar, int[] bigMConstraint) {
         BranchAndBound.A = A;
         BranchAndBound.C = C;
         BranchAndBound.b = b;
+        BranchAndBound.numOfArtificialVar = numOfArtificialVar;
+        BranchAndBound.bigMConstraint = bigMConstraint;
+
 
         //Compute the number of variables that needs to be considered
         for (int i = 0; C[i] > 0; i++) {
@@ -22,8 +27,8 @@ public class BranchAndBound {
         double[] solution = new double[number_of_variables];
 
         //Step one: Compute the LP relaxation solution
-        SimplexSolver simplexSolver = new SimplexSolver();
-        double initialOptimal = simplexSolver.SimplexSolver(A, C, b);
+        BigM bigM = new BigM();
+        double initialOptimal = bigM.SimplexSolver(A, C, b, numOfArtificialVar, bigMConstraint);
 
         //Step two: Check if the solution is binary
         //The check for this is still missing
@@ -45,40 +50,40 @@ public class BranchAndBound {
         return branchAndBoundOptimalValue(0, initialOptimal);
     }
 
-        private double branchAndBoundOptimalValue(int count, double optimal) {
-            // Base case: If we've considered all variables, return the optimal value found
-            if (count >= number_of_variables) {
-                return optimal;
-            }
-
-            SimplexSolver simplexSolver = new SimplexSolver();
-
-            // Update matrices for x = 0 and x1
-            double[][] splitMatrixA = dropColumn(A, 0);
-            double[] splitMatrixC = dropIndex(C, 0);
-            double[] splitMatrixB1 = new double[b.length];
-            for (int i = 0; i < b.length; i++) {
-                splitMatrixB1[i] = b[i] - A[i][0];
-            }
-
-            A = splitMatrixA;
-            C = splitMatrixC;
-            //Value of b needs to be adjusted
-
-            // Solve for x = 0
-            double optimalValueForZero = simplexSolver.SimplexSolver(splitMatrixA, splitMatrixC, b);
-
-            // Solve for x = 1
-            double optimalValueForOne = C[0] + simplexSolver.SimplexSolver(splitMatrixA, splitMatrixC, splitMatrixB1);
-
-            //Decide on which branch to continue
-            if (optimalValueForZero > optimalValueForOne) {
-                return branchAndBoundOptimalValue(count + 1, optimalValueForZero);
-            }
-            else {
-                return branchAndBoundOptimalValue(count + 1, optimalValueForOne);
-            }
+    private double branchAndBoundOptimalValue(int count, double optimal) {
+        // Base case: If we've considered all variables, return the optimal value found
+        if (count >= number_of_variables) {
+            return optimal;
         }
+
+        BigM bigM = new BigM();
+
+        // Update matrices for x = 0 and x1
+        double[][] splitMatrixA = dropColumn(A, 0);
+        double[] splitMatrixC = dropIndex(C, 0);
+        double[] splitMatrixB1 = new double[b.length];
+        for (int i = 0; i < b.length; i++) {
+            splitMatrixB1[i] = b[i] - A[i][0];
+        }
+
+        A = splitMatrixA;
+        C = splitMatrixC;
+        //Value of b needs to be adjusted
+
+        // Solve for x = 0
+        double optimalValueForZero = bigM.SimplexSolver(splitMatrixA, splitMatrixC, b, numOfArtificialVar, bigMConstraint);
+
+        // Solve for x = 1
+        double optimalValueForOne = C[0] + bigM.SimplexSolver(splitMatrixA, splitMatrixC, splitMatrixB1, numOfArtificialVar, bigMConstraint);
+
+        //Decide on which branch to continue
+        if (optimalValueForZero > optimalValueForOne) {
+            return branchAndBoundOptimalValue(count + 1, optimalValueForZero);
+        }
+        else {
+            return branchAndBoundOptimalValue(count + 1, optimalValueForOne);
+        }
+    }
 
     public static double[][] dropColumn(double[][] matrix, int columnIndex) {
         int numRows = matrix.length;
@@ -109,6 +114,3 @@ public class BranchAndBound {
         return newMatrix;
     }
 }
-
-
-
