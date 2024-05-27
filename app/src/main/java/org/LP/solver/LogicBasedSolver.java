@@ -21,11 +21,12 @@ public class LogicBasedSolver {
 
         int houseNumber = 0;
 
-        //Create the solution
+        //Create the solution for every student
         for (int i = 0; i < students.length; i++) {
             boolean violationBudget = true;
             boolean violationDistance = true;
 
+            //Check if a student can afford the house
             if (students[i][0] >= houses[houseNumber][0]) {
                 violationBudget = false;
             }
@@ -37,16 +38,19 @@ public class LogicBasedSolver {
                 return -1;
             }
 
+            //Check if the student does not have to travel too far
             if (students[i][1] >= houses[houseNumber][1]) {
                 violationDistance = false;
             }
 
+            //If both conditions are satisfied the student will be placed into that house
             if (!violationDistance) {
                 solution[i] = houseNumber;
                 costs[i] = houses[houseNumber][0];
                 placesTaken[houseNumber]++;
             }
 
+            //If the Distance constraint is violated, check if the student can be placed in another house
             else {
                 int newHouseNumber = houseNumber;
 
@@ -56,6 +60,9 @@ public class LogicBasedSolver {
                     if (students[j][0] >= houses[solution[houseNumber]][0] & students[j][1] >= houses[solution[j]][1] & violationDistance) {
                         newHouseNumber = solution[j];
                         solution[j] = houseNumber;
+                        costs[j] = houses[houseNumber][0];
+                        placesTaken[houseNumber]++;
+                        placesTaken[newHouseNumber]--;
                         violationDistance = false;
                     }
                 }
@@ -64,6 +71,7 @@ public class LogicBasedSolver {
                 while (violationDistance) {
                     while (placesTaken[newHouseNumber] >= houses[newHouseNumber][2]) {
                         newHouseNumber++;
+                        //Check if there are no more houses left and thus the student cannot be placed
                         if (newHouseNumber >= houses.length) {
                             System.out.println("Student " + i + " cannot be placed into a house.");
                             System.out.println("There is no valid solution. (violation Distance)");
@@ -82,6 +90,7 @@ public class LogicBasedSolver {
 
                 }
 
+                //If the Distance restriction is satisfied the student will be placed into the available house
                 solution[i] = newHouseNumber;
                 costs[i] = houses[newHouseNumber][0];
                 placesTaken[newHouseNumber]++;
