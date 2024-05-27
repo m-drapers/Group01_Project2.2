@@ -10,12 +10,10 @@ public class arrays {
         static double[][] housesArray; 
         static double[][] studentsArray;
 
-        public static void main(String[] args) {
-            getData();
-            printMatrix(studentsArray);
-            
+        public arrays(String sqlFilePath){
+            this.sqlFilePath = sqlFilePath;
         }
-        
+    
         public static double[][] getHousesArray() {
             return housesArray;
         }
