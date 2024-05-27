@@ -4,7 +4,7 @@ public class LogicBasedSolverTest {
 
     public static void main(String[] args) {
         double[][] A = { { 300, 25 },
-                { 325, 15 },
+                { 325, 40 },
                 {400, 6 },
                 { 400, 35 }
         };
