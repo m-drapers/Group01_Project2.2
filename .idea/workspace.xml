@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7fd10f1-c798-4b24-987a-0f055be75486" name="Changes" comment="update a Junit test of Simplex Method">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_1_2024_10_07_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_1_2024_10_07_AM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/BranchAndBoundExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/CuttingPlaneExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/bdtest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/bigMTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/org/LP/SimplexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/org/LP/SimplexTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/SimplexSolverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/SimplexSolverTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +28,54 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -39,6 +88,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.ortools/ortools-java/9.10.4067/9da7ce8ed400c5f33bff71d92ee497e58a882ebf/ortools-java-9.10.4067.jar!/com/google/ortools/Loader.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.ortools/ortools-java/9.10.4067/9da7ce8ed400c5f33bff71d92ee497e58a882ebf/ortools-java-9.10.4067.jar!/com/google/ortools/linearsolver/MPObjective.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.ortools/ortools-java/9.10.4067/9da7ce8ed400c5f33bff71d92ee497e58a882ebf/ortools-java-9.10.4067.jar!/com/google/ortools/linearsolver/MPSolver.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.ortools/ortools-java/9.10.4067/9da7ce8ed400c5f33bff71d92ee497e58a882ebf/ortools-java-9.10.4067.jar!/com/google/ortools/linearsolver/MPVariable.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -54,13 +109,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Group01_Project2.2:app [:app:CuttingPlaneExample.main()].executor": "Run",
     "Gradle.Group01_Project2.2:app [:app:Main.main()].executor": "Debug",
     "Gradle.Group01_Project2.2:app [:app:SimplexSolverTest.main()].executor": "Run",
+    "Gradle.Group01_Project2.2:app [:app:bdtest.main()].executor": "Debug",
     "Gradle.Group01_Project2.2:app [:app:main.main()].executor": "Debug",
+    "Gradle.Group01_Project2.2:app [:app:test.main()].executor": "Run",
     "Gradle.SimplexTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "compile",
+    "git-widget-placeholder": "Cutting-Plane-Algorithm",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/IntelliJ IDEA 2023.3.4/Project",
     "node.js.detected.package.eslint": "true",
@@ -75,13 +133,13 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.SimplexSolverTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.LP.Main" />
+  <component name="RunManager" selected="Application.bdtest">
+    <configuration name="CuttingPlaneExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.LP.solver.CuttingPlaneExample" />
       <module name="Group01_Project2.2.app.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.LP.*" />
+          <option name="PATTERN" value="org.LP.solver.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,8 +160,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.LP.solver.main" />
+    <configuration name="bdtest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.LP.solver.bdtest" />
+      <module name="Group01_Project2.2.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.LP.solver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.LP.solver.test" />
       <module name="Group01_Project2.2.app.main" />
       <extension name="coverage">
         <pattern>
@@ -141,18 +212,19 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.bdtest" />
+        <item itemvalue="Application.test" />
+        <item itemvalue="Application.CuttingPlaneExample" />
         <item itemvalue="Gradle.SimplexTest" />
         <item itemvalue="Application.SimplexSolverTest" />
-        <item itemvalue="Application.main" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-corretto-21.0.2-4caba194b151-51586f01" />
-        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -170,6 +242,8 @@
       <workItem from="1713904017789" duration="4387000" />
       <workItem from="1713945702229" duration="5007000" />
       <workItem from="1714550647500" duration="297000" />
+      <workItem from="1718994906102" duration="2697000" />
+      <workItem from="1719064081477" duration="9351000" />
     </task>
     <task id="LOCAL-00001" summary="a simple simplex solver, I use the exercise question to test">
       <option name="closed" value="true" />
@@ -219,6 +293,30 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/SimplexSolver.java</url>
           <line>60</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/CuttingPlaneExample.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/BranchAndBoundExample.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/BranchAndBoundExample.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/BranchAndBoundExample.java</url>
+          <line>8</line>
+          <properties class="org.LP.solver.BranchAndBoundExample" method="solveProblem">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

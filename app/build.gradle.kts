@@ -34,3 +34,7 @@ application {
     // Define the main class for the application.
     mainClass = "org.example.App"
 }
+dependencies {
+    // https://mvnrepository.com/artifact/com.google.ortools/ortools-java
+    implementation("com.google.ortools:ortools-java:9.10.4067")
+}
