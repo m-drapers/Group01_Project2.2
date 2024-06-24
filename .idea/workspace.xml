@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7fd10f1-c798-4b24-987a-0f055be75486" name="Changes" comment="update a Junit test of Simplex Method">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java" afterDir="false" />
@@ -81,7 +82,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.LogicBasedSolverTest">
+  <component name="RunManager" selected="Application.GeneticSolverTest">
     <configuration name="BranchAndBoundSortedArrayTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.LP.solver.BranchAndBoundSortedArrayTest" />
       <module name="Group01_Project2.2.app.main" />
@@ -108,8 +109,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LogicBasedSolverTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.LP.solver.LogicBasedSolverTest" />
+    <configuration name="GeneticSolverTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.LP.solver.GeneticSolverTest" />
       <module name="Group01_Project2.2.app.main" />
       <extension name="coverage">
         <pattern>
@@ -121,8 +122,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimplexSolverTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.LP.solver.SimplexSolverTest" />
+    <configuration name="LogicBasedSolverTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.LP.solver.LogicBasedSolverTest" />
       <module name="Group01_Project2.2.app.main" />
       <extension name="coverage">
         <pattern>
@@ -174,10 +175,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.LogicBasedSolverTest" />
+        <item itemvalue="Application.GeneticSolverTest" />
         <item itemvalue="Application.logicBasedSolverTest" />
         <item itemvalue="Application.BranchAndBoundSortedArrayTest" />
         <item itemvalue="Application.BranchAndBoundTest" />
-        <item itemvalue="Application.SimplexSolverTest" />
       </list>
     </recent_temporary>
   </component>
@@ -215,6 +216,15 @@
       <workItem from="1716824558907" duration="257000" />
       <workItem from="1716828258617" duration="8394000" />
       <workItem from="1716838411202" duration="2031000" />
+      <workItem from="1718537767196" duration="3193000" />
+      <workItem from="1718890393332" duration="3998000" />
+      <workItem from="1719043494025" duration="5611000" />
+      <workItem from="1719142230641" duration="4906000" />
+      <workItem from="1719147587781" duration="4609000" />
+      <workItem from="1719219515252" duration="3570000" />
+      <workItem from="1719223636792" duration="1094000" />
+      <workItem from="1719224815512" duration="341000" />
+      <workItem from="1719239753169" duration="5691000" />
     </task>
     <task id="LOCAL-00001" summary="a simple simplex solver, I use the exercise question to test">
       <option name="closed" value="true" />
@@ -276,6 +286,11 @@
           <line>60</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverTest.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java</url>
           <line>4</line>
@@ -285,6 +300,10 @@
           </properties>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="11" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
