@@ -7,7 +7,6 @@ public class BranchAndCut {
     static {
         Loader.loadNativeLibraries();
     }
-
     double[][] A1; // coefficient of a in <= constraints
     double[] b1; // coefficient of b in <= constraints
     double[] c1; // coefficient of c in <= constraints

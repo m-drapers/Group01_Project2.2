@@ -70,6 +70,9 @@ public class BigM {
             printVector();
             System.out.println("\n");
         }
+        if (isOptimum()){
+
+        }
         printOptimum();
         return result;
     }

@@ -1,6 +1,6 @@
 package org.LP.solver;
 
-public class BranchAndCutExample {
+public class BranchAndCutTest {
     public static void main(String[] args) {
         double[][] A={
                 {1,1},

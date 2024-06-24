@@ -9,7 +9,7 @@ public class test {
     }
 
     public static void main(String[] args) {
-        MPSolver solver = MPSolver.createSolver("CBC");
+        MPSolver solver = MPSolver.createSolver("SCIP");
 
         // Create the variables x and y.
         MPVariable x1 = solver.makeIntVar(0.0, MPSolver.infinity(), "x1");
@@ -33,7 +33,6 @@ public class test {
         constraint3.setCoefficient(x1, 6);
         constraint3.setCoefficient(x2, 2);
 
-        // Solve the problem.
         MPSolver.ResultStatus resultStatus = solver.solve();
 
         // Check that the problem has an optimal solution.
@@ -42,6 +41,16 @@ public class test {
             System.out.println("Objective value = " + objective.value());
             System.out.println("x1 = " + x1.solutionValue());
             System.out.println("x2 = " + x2.solutionValue());
+            System.out.println("Coefficient of x1 in constraint1 = " + constraint1.getCoefficient(x1));
+            System.out.println("Coefficient of x2 in constraint1 = " + constraint1.getCoefficient(x2));
+            double slackConstraint1 = constraint1.ub() - (x1.solutionValue() * constraint1.getCoefficient(x1) + x2.solutionValue() * constraint1.getCoefficient(x2));
+            double slackConstraint2 = constraint2.ub() - (x1.solutionValue() * constraint2.getCoefficient(x1) + x2.solutionValue() * constraint2.getCoefficient(x2));
+            double slackConstraint3 = constraint3.ub() - (x1.solutionValue() * constraint3.getCoefficient(x1) + x2.solutionValue() * constraint3.getCoefficient(x2));
+            System.out.println("Slack of constraint1 = " + slackConstraint1);
+            System.out.println("Slack of constraint2 = " + slackConstraint2);
+            System.out.println("Slack of constraint3 = " + slackConstraint3);
+        }else {
+            System.out.println("No feasible solution");
         }
     }
 }
