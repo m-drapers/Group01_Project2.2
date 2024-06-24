@@ -17,7 +17,7 @@ public class DataWriter {
     static String user = "root";
     static String password = "YES";
 
-    static final String sqlFilePath = "app/src/main/java/org/LP/generator/data.sql";
+    public static final String sqlFilePath = "app/src/main/java/org/LP/generator/data.sql";
 
     //housing peramiters
     static int numOfHouses = 12;
@@ -114,13 +114,30 @@ public class DataWriter {
     }
 
     public static void clearFile(String filePath) throws IOException {
-            File file = new File(sqlFilePath);
-            if (file.exists()) {
-                file.delete(); // delete the existing file
+        File file = new File(filePath);
+        File parentDir = file.getParentFile();
+    
+        // Create parent directories if they don't exist
+        if (parentDir != null && !parentDir.exists()) {
+            if (!parentDir.mkdirs()) {
+                throw new IOException("Failed to create directory " + parentDir.getAbsolutePath());
             }
-            file.createNewFile(); //recreate the file
-            System.out.println("File reset successfully");
         }
+    
+        // Delete existing file if it exists
+        if (file.exists()) {
+            if (!file.delete()) {
+                throw new IOException("Failed to delete existing file " + filePath);
+            }
+        }
+    
+        // Create new file
+        if (!file.createNewFile()) {
+            throw new IOException("Failed to create new file " + filePath);
+        }
+    
+        System.out.println("File reset successfully");
+    }
     
   
     public static void checkFile() {
@@ -196,7 +213,7 @@ public class DataWriter {
             // Establish connection to the database
             try (Connection connection = DriverManager.getConnection(url, user, password)) {
                 System.out.println("Connected to the database successfully!");
-
+    
                 // Fetch house data
                 List<Double> prices = new ArrayList<>();
                 List<Double> distances = new ArrayList<>();
@@ -208,7 +225,7 @@ public class DataWriter {
                         distances.add(rs.getDouble("Distance"));
                     }
                 }
-
+    
                 // Fetch student data
                 List<Double> budgets = new ArrayList<>();
                 List<Double> maxDistances = new ArrayList<>();
@@ -220,31 +237,50 @@ public class DataWriter {
                         maxDistances.add(rs.getDouble("MaxDis"));
                     }
                 }
-
+    
                 // Prepare data for Simplex Solver
                 double[] C = new double[prices.size()];
                 double[][] A = new double[budgets.size()][prices.size()];
                 double[] b = new double[budgets.size()];
-
+    
                 for (int i = 0; i < prices.size(); i++) {
                     C[i] = prices.get(i); // Minimize cost
                 }
-
+    
                 for (int i = 0; i < budgets.size(); i++) {
                     for (int j = 0; j < prices.size(); j++) {
                         A[i][j] = distances.get(j); // Constraint: distances
                     }
                     b[i] = maxDistances.get(i);
                 }
-
-                
-                // simplexSolver solver = new simplexSolver(A, C, b);
-                
+    
+                // Define constraint types (e.g., "<=", ">=", "=")
+                String[] constraintTypes = new String[budgets.size()];
+                for (int i = 0; i < constraintTypes.length; i++) {
+                    constraintTypes[i] = "<="; // Example: all constraints are "<="
+                }
+    
+                // Use LPProblemPreparer to add slack, surplus, and artificial variables and print matrices
+                System.out.println("Prepared LP Problem:");
+                LPProblemPreparer.prepareLPProblem(A, b, C, constraintTypes);
+    
             }
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+    
+    public static String getUrl() {
+        return url;
+    }
+
+    public static String getUser() {
+        return user;
+    }
+
+    public static String getPassword() {
+        return password;
     }
     
 
