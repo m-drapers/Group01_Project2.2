@@ -21,6 +21,9 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+
+    implementation("com.google.ortools:ortools-java:9.10.4067")
+
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
