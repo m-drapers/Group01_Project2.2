@@ -3,6 +3,11 @@ package org.LP.solver;
 public class LogicBasedSolverTest {
 
     public static void main(String[] args) {
+
+
+
+
+
         double[][] A = { {258.59,16.98},
                 {322.17,19.20},
                 {341.54,16.62},

@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7fd10f1-c798-4b24-987a-0f055be75486" name="Changes" comment="update a Junit test of Simplex Method">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverBudget.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverBudgetTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverDistance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverDistanceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverBudget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverBudget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverBudgetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverBudgetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverDistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +39,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="compile" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -82,7 +87,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.GeneticSolverDistanceTest">
+  <component name="RunManager" selected="Application.GeneticSolverBudgetTest">
     <configuration name="BranchAndBoundTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.LP.solver.BranchAndBoundTest" />
       <module name="Group01_Project2.2.app.main" />
@@ -301,7 +306,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java</url>
           <line>4</line>
-          <properties class="org.LP.solver.LogicBasedSolverTest" method="main">
+          <properties class="org.LP.solver.LogicBasedSolverTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>

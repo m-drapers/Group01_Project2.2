@@ -47,11 +47,6 @@ public class GeneticSolverDistance {
         double[][] placesTaken = new double[firstGeneration][houses.length+1];
         int[] houseNumber = new int[houses.length];
 
-        //Fill the placesTaken array with zeros
-        for (int i = 0; i < placesTaken[0].length; i++) {
-            Arrays.fill(placesTaken[i], 0);
-        }
-
         // Generate a list of the house-numbers
         List<Integer> numbers = new ArrayList<>();
         for (int i = 0; i < houses.length; i++) {

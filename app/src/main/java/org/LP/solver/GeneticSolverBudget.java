@@ -5,7 +5,7 @@ import java.util.*;
 public class GeneticSolverBudget {
 
     private static double[][] students; //Students matrix
-    private static double[][] houses; //Sorted houses matrix based on distance low to high, then price low to high
+    private static double[][] houses; //Houses matrix
     private static int firstGeneration; //firstGeneration must be an even number
     private static int numberOfGenerations; //The number of generations we want to generate
 
@@ -47,11 +47,6 @@ public class GeneticSolverBudget {
         double[][] placesTaken = new double[firstGeneration][houses.length+1];
         int[] houseNumber = new int[houses.length];
 
-        //Fill the placesTaken array with zeros
-        for (int i = 0; i < placesTaken[0].length; i++) {
-            Arrays.fill(placesTaken[i], 0);
-        }
-
         // Generate a list of the house-numbers
         List<Integer> numbers = new ArrayList<>();
         for (int i = 0; i < houses.length; i++) {
@@ -61,7 +56,7 @@ public class GeneticSolverBudget {
         //Create the first generation of random solutions
         //These solutions are distance valid and will place every student in a house within their maximum distance
         //These solutions are spaces valid and will place no more students in a house then there are available rooms
-        //These solutions do not take into account the budget violations and the bedget is used as the score function
+        //These solutions do not take into account the budget violations and the budget is used as the score function
 
         for (int i = 0; i < firstGeneration; i++) {
 
@@ -85,7 +80,7 @@ public class GeneticSolverBudget {
 
                             //If a available house if found for the student we add this as a solution to the solution arrays
                             solution[i][j] = houseNumber[houseNumberCount];
-                            costs[i][j] = houses[houseNumber[houseNumberCount]][1];
+                            costs[i][j] = houses[houseNumber[houseNumberCount]][0];
                             double budgetViolation = 0;
                             if (houses[houseNumber[houseNumberCount]][0] > students[j][0]) {
                                 budgetViolation = houses[houseNumber[houseNumberCount]][0] - students[j][0];
@@ -229,7 +224,9 @@ public class GeneticSolverBudget {
         }
 
         System.out.println("result: " + result);
-        return result;
+
+        return exceededBudget[0][students.length];
+        //return result;
     }
 
 }
