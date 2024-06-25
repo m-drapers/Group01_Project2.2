@@ -1,4 +1,4 @@
-import java.io.*;
+package org.LP.testData;
 import java.nio.file.*;
 import java.util.*;
 import java.util.stream.*;
@@ -6,7 +6,7 @@ import java.util.stream.*;
 public class arrays {
 
         
-        static String sqlFilePath = "/Users/milou/Desktop/Project/Group01_Project2.2/app/src/main/java/org/LP/test data/data25.sql";
+        static String sqlFilePath = "D:\\IntelliJ IDEA 2023.3.4\\Project\\Group01_Project2.2\\app\\src\\main\\java\\org\\LP\\test data\\data50.sql";
         static double[][] housesArray; 
         static double[][] studentsArray;
 

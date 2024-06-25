@@ -6,20 +6,25 @@ public class BB {
     double[][] A;
     double[] b;
     double[] c;
+    double[][] A1;
+    double[] b1;
     double []stableC;
     double optimalValue;
     ArrayList<Double> solution;
     int count = 0;
 
-    public BB(double[][] A, double[] b, double[] c) {
+    public BB(double[][] A, double[] b, double[] c,double[][] A1, double[] b1) {
         this.A = A;
         this.b = b;
         this.c = c;
         this.stableC = c;
+        this.A1 = A1;
+        this.b1 = b1;
+
     }
     public void solve() {
         Simplex simplex = new Simplex();
-        simplex.Simplex(A, b, c);
+        simplex.Simplex(A, b, c,A1,b1);
         this.solution = simplex.getSolution();
         this.optimalValue = simplex.getObjectiveValue();
         while (!isInteger(solution)) {
@@ -35,9 +40,12 @@ public class BB {
                 double[] newBLower = createNewB(b, A, index, lowerBound);
                 double[][] newA = createNewA(A, index);
                 double[] newC = createNewC(c, index);
-                simplex.Simplex(newA, newBUpper, newC);
+                double[][] newA1 = createNewA(A1, index);
+                double[] newB1Upper = createNewB(b1, A1, index, upperBound);
+                double[] newB1Lower = createNewB(b1, A1, index, lowerBound);
+                simplex.Simplex(newA, newBUpper, newC,newA1,newB1Upper);
                 double upperObjective = simplex.objectiveValue;
-                simplex.Simplex(newA, newBLower, newC);
+                simplex.Simplex(newA, newBLower, newC,newA1,newB1Lower);
                 double lowerObjective = simplex.objectiveValue;
                 if (upperObjective >= lowerObjective) {
                     solution.set(index, (double) upperBound);

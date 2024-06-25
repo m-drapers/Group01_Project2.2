@@ -9,7 +9,7 @@ public class BBTest {
         };
         double[] b={5,0,21};
         double[] c={2,1};
-        BB branchAndBound = new BB(A,b,c);
+        BB branchAndBound = new BB(A,b,c,null,null);
           branchAndBound.solve();
             System.out.println("Optimal value = "+branchAndBound.getOptimalValue());
         System.out.println("Solution:");
