@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d7fd10f1-c798-4b24-987a-0f055be75486" name="Changes" comment="update a Junit test of Simplex Method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverBudget.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverBudget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverBudgetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverBudgetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverDistance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,6 +228,7 @@
       <workItem from="1719239753169" duration="5691000" />
       <workItem from="1719295068553" duration="7000000" />
       <workItem from="1719308232550" duration="2000" />
+      <workItem from="1719326075526" duration="1230000" />
     </task>
     <task id="LOCAL-00001" summary="a simple simplex solver, I use the exercise question to test">
       <option name="closed" value="true" />
