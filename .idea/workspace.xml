@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7fd10f1-c798-4b24-987a-0f055be75486" name="Changes" comment="add a BranchAndCut method">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/testData/setUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_1_2024_10_07_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_1_2024_10_07_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/BB.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/BB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/BBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/BBTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/Simplex.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/Simplex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/test data/arrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/testData/arrays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/test data/data100.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/testData/data100.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/test data/data200.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/testData/data200.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/test data/data25.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/testData/data25.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/test data/data300.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/testData/data300.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/test data/data50.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/testData/data50.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/testData/setUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/testData/setUp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,11 +38,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
                 <item name="app" type="2d1252cf:ModuleNode" />
               </path>
               <path>
@@ -61,47 +45,6 @@
                 <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
                 <item name="app" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
-                <item name="app" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
-                <item name="app" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
-                <item name="app" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
-                <item name="app" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
-                <item name="app" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="testCompileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Group01_Project2.2" type="f1a62948:ProjectNode" />
-                <item name="app" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="testRuntimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
               </path>
             </expand>
             <select />
@@ -141,6 +84,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.BBTest.executor": "Run",
+    "Application.setUp.executor": "Run",
+    "Gradle.Build Group01_Project2.2.executor": "Run",
     "Gradle.Group01_Project2.2:app [:app:BBTest.main()].executor": "Run",
     "Gradle.Group01_Project2.2:app [:app:BranchAndBoundTest.main()].executor": "Run",
     "Gradle.Group01_Project2.2:app [:app:BranchAndCutTest.main()].executor": "Run",
@@ -277,6 +222,7 @@
       <workItem from="1719160491733" duration="16330000" />
       <workItem from="1719178589037" duration="28000" />
       <workItem from="1719325472920" duration="11253000" />
+      <workItem from="1719338499564" duration="5116000" />
     </task>
     <task id="LOCAL-00001" summary="a simple simplex solver, I use the exercise question to test">
       <option name="closed" value="true" />
@@ -310,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719080974131</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add all">
+      <option name="closed" value="true" />
+      <created>1719337710813</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719337710813</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +275,8 @@
     <MESSAGE value="update a conditional statement" />
     <MESSAGE value="update a Junit test of Simplex Method" />
     <MESSAGE value="add a BranchAndCut method" />
-    <option name="LAST_COMMIT_MESSAGE" value="add a BranchAndCut method" />
+    <MESSAGE value="add all" />
+    <option name="LAST_COMMIT_MESSAGE" value="add all" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -362,9 +317,14 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/Simplex.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="21" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/testData/setUp.java</url>
+          <line>360</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/testData/setUp.java</url>
+          <line>340</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

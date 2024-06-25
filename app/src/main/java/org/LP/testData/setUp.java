@@ -288,71 +288,66 @@ public class setUp {
                 for (int j = 14 * i; j < 14 * (i + 1); j++) {
                     A[i][j] = 1;
                 }
-            }else if (i == 15) {
+            } else if (i == 15) {
                 for (int j = 14 * i; j < 14 * (i + 1); j++) {
                     A[i][j] = 1;
                 }
-            }else if (i == 16) {
+            } else if (i == 16) {
                 for (int j = 14 * i; j < 14 * (i + 1); j++) {
                     A[i][j] = 1;
                 }
-            } else if (i==17) {
+            } else if (i == 17) {
                 for (int j = 14 * i; j < 14 * (i + 1); j++) {
                     A[i][j] = 1;
                 }
-            } else if (i==18) {
+            } else if (i == 18) {
                 for (int j = 14 * i; j < 14 * (i + 1); j++) {
                     A[i][j] = 1;
                 }
-            }else if (i==19) {
+            } else if (i == 19) {
                 for (int j = 14 * i; j < 14 * (i + 1); j++) {
                     A[i][j] = 1;
                 }
-            }else if (i==20) {
+            } else if (i == 20) {
                 for (int j = 14 * i; j < 14 * (i + 1); j++) {
                     A[i][j] = 1;
                 }
-            }else if (i==21) {
+            } else if (i == 21) {
                 for (int j = 14 * i; j < 14 * (i + 1); j++) {
                     A[i][j] = 1;
                 }
-            }else if (i==22) {
+            } else if (i == 22) {
                 for (int j = 14 * i; j < 14 * (i + 1); j++) {
                     A[i][j] = 1;
                 }
-            }else if (i==23) {
+            } else if (i == 23) {
                 for (int j = 14 * i; j < 14 * (i + 1); j++) {
                     A[i][j] = 1;
                 }
-            }else if (i==24) {
+            } else if (i == 24) {
                 for (int j = 14 * i; j < 14 * (i + 1); j++) {
                     A[i][j] = 1;
                 }
-            }else if (i > 24) {
+            } else if (i > 24) {
                 for (int j = 0; j < A[0].length; j++) {
-                    if (j % 14 == i - 15) {
+                    A[i][j] = 0;
+                    if (j % 14 == i - 25) {
                         A[i][j] = 1;
                     }
-                    A[i][j] = 0;
                 }
             }
         }
-        for (int i = 0; i < A.length; i++) {
-            for (int j = 0; j < A[0].length; j++) {
-                System.out.print(A[i][j] + " ");
-            }
-            System.out.println();
-        }
+
         double[] b = new double[39];
         for (int i = 0; i < studentPrice.length; i++) {
             b[i] = studentPrice[i];
         }
         for (int i = 25; i < b.length; i++) {
-            b[i] = housingNumber[i-25];
+            b[i] = housingNumber[i - 25];
         }
         double[][] A1 = new double[15][350];
         for (int i = 0; i < A1.length; i++) {
-            for (int j = i*14; j < (i+1)*14; j++) {
+            for (int j = i * 14; j < (i + 1) * 14; j++) {
                 A1[i][j] = 1;
             }
         }
@@ -360,21 +355,23 @@ public class setUp {
         for (int i = 0; i < b1.length; i++) {
             b1[i] = 1;
         }
-        for (int i = 0; i < A.length; i++) {
-            for (int j = 0; j < A[0].length; j++) {
-                System.out.print(A[i][j]+" ");
-            }
-            System.out.println();
-        }
+
         BB branchAndBound = new BB(A, b, c, A1, b1);
         branchAndBound.solve();
         System.out.println("Optimal value = " + branchAndBound.getOptimalValue());
         System.out.println("Solution:");
+        ArrayList<Integer> index = new ArrayList<>();
         for (int i = 0; i < branchAndBound.getSolution().size(); i++) {
-            System.out.print("x" + (i + 1) + " = " + branchAndBound.getSolution().get(i)+" ");
+            System.out.print("x" + (i + 1) + " = " + branchAndBound.getSolution().get(i) + " ");
             if (i % 14 == 0) {
                 System.out.println();
+            } else if (branchAndBound.getSolution().get(i) == 1) {
+                index.add(i);
             }
+        }
+        for (int i = 0; i < singlePrice.length; i++) {
+            System.out.println();
+            System.out.print(singlePrice[i] + " ");
         }
     }
 }

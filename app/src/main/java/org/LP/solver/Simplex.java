@@ -36,7 +36,7 @@ public class Simplex {
         for (int i = 0; i < c.length; i++) {
             objective.setCoefficient(x[i], c[i]);
         }
-        objective.setMaximization();
+        objective.setMinimization();
 
         // Create the constraints.
         for (int i = 0; i < b.length; i++) {
