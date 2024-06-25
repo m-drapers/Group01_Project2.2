@@ -21,25 +21,26 @@ public class DataWriter {
     static final String sqlFilePath = util.getSqlFilePath();
 
     //housing peramiters
-    static int numOfHouses = 300;
-    static int numOfStudents = 300; 
+    static int numOfHouses = 2;
+    static int numOfStudents = 2; 
 
 
     //wykys
    static final WyckData amby = new WyckData("Amby", 400.0, 750.0, 6.2, 7.0);
    static final WyckData biesland = new WyckData("Biesland", 430.0, 700.0, 4.7, 5.5);
-   static final WyckData binnenstad = new WyckData("Binnenstad", 430.0, 800.0, 3.9, 4.6);
-   static final WyckData borgharen = new WyckData("Borgharen", 400.0, 750.0, 8.1, 9.0);
-   static final WyckData boschpoort = new WyckData("Boschpoort", 400.0, 800.0, 6.1, 6.9);
-   static final WyckData boschstraatkwartier = new WyckData("Boschstraatkwartier", 430.0, 800.0, 4.7, 5.7);
-   static WyckData heer = new WyckData("Heer", 430.0, 850.0, 2.4, 2.8);
-   static WyckData itteren = new WyckData("Itteren", 400.0, 700.0, 10.0, 10.7);
-   static WyckData jekerkwartier = new WyckData("Jekerkwartier", 450.0, 850.0, 3.3, 4.1);
-   static WyckData sintPieter = new WyckData("Sint Pieter", 400.0, 800.0, 5.5, 6.1);
-   static WyckData villapark = new WyckData("Villapark", 450.0, 850, 3.7, 4.0);
-   static WyckData wyck = new WyckData("Wyck", 400.0, 900.0, 3.5, 4.1);
-   static WyckData[] wycks = {amby, biesland, binnenstad, borgharen, boschpoort,boschstraatkwartier, heer, itteren, jekerkwartier, sintPieter, villapark, wyck};
+//    static final WyckData binnenstad = new WyckData("Binnenstad", 430.0, 800.0, 3.9, 4.6);
+//    static final WyckData borgharen = new WyckData("Borgharen", 400.0, 750.0, 8.1, 9.0);
+//    static final WyckData boschpoort = new WyckData("Boschpoort", 400.0, 800.0, 6.1, 6.9);
+//    static final WyckData boschstraatkwartier = new WyckData("Boschstraatkwartier", 430.0, 800.0, 4.7, 5.7);
+//    static WyckData heer = new WyckData("Heer", 430.0, 850.0, 2.4, 2.8);
+//    static WyckData itteren = new WyckData("Itteren", 400.0, 700.0, 10.0, 10.7);
+//    static WyckData jekerkwartier = new WyckData("Jekerkwartier", 450.0, 850.0, 3.3, 4.1);
+//    static WyckData sintPieter = new WyckData("Sint Pieter", 400.0, 800.0, 5.5, 6.1);
+//    static WyckData villapark = new WyckData("Villapark", 450.0, 850, 3.7, 4.0);
+//    static WyckData wyck = new WyckData("Wyck", 400.0, 900.0, 3.5, 4.1);
+//    static WyckData[] wycks = {amby, biesland, binnenstad, borgharen, boschpoort,boschstraatkwartier, heer, itteren, jekerkwartier, sintPieter, villapark, wyck};
 
+   static WyckData[] wycks = {amby, biesland};
    //student budget ratios/ranges
     static final int[] priceRangesLower = {100, 300, 500, 700, 900};
     static final int[] priceRangesHigher = {300, 500, 700, 900, 1200};

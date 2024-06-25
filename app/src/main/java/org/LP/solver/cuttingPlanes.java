@@ -1,3 +1,6 @@
+package org.LP.solver;
+
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
@@ -210,17 +213,17 @@ public class cuttingPlanes {
         System.out.printf("Objective function value: %.2f\n", finalObjectiveValue);
     }
 
-    public static void main(String[] args) {
-        // Including slack variables
-        double[][] A = {
-            {1, 1, 1, 0, 0},
-            {-1, 1, 0, 1, 0},
-            {6, 2, 0, 0, 1}
-        };
-        double[] b = {5, 0, 21};
-        double[] C = {2, 1, 0, 0, 0};
-        cuttingPlanes.GomoryCutSolver(A, C, b);
-    }
+    // public static void main(String[] args) {
+    //     // Including slack variables
+    //     double[][] A = {
+    //         {1, 1, 1, 0, 0},
+    //         {-1, 1, 0, 1, 0},
+    //         {6, 2, 0, 0, 1}
+    //     };
+    //     double[] b = {5, 0, 21};
+    //     double[] C = {2, 1, 0, 0, 0};
+    //     cuttingPlanes.GomoryCutSolver(A, C, b);
+    // }
 
     private static double roundUp(double value) {
         BigDecimal bd = BigDecimal.valueOf(value);
