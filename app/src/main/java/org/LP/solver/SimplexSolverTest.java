@@ -7,7 +7,7 @@ public class SimplexSolverTest {
     private static double b[] = { 4,12,18};
     private static double C[] = { 3,2,0,0,0};
     public static void main(String[] args) {
-        SimplexSolver simplexSolver = new SimplexSolver();
-        simplexSolver.SimplexSolver(A, C, b);
+        simplexSolverCP simplexSolver = new simplexSolverCP();
+        System.out.println(simplexSolver.solver(A, C, b));
     }
 }
