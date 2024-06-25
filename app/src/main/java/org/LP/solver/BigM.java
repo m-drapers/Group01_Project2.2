@@ -26,6 +26,7 @@ public class BigM {
         this.numOfArtificialVar = numOfArtificialVar;
         this.bigMConstraint = bigMConstraint;
         this.numOriginalVar = C.length-b.length;
+        
         if (numOfArtificialVar > 0 && bigMConstraint.length == numOfArtificialVar) {
             double[][] newA = new double[A.length][A[0].length + numOfArtificialVar];
             double[] newC = new double[C.length + numOfArtificialVar];
