@@ -1,9 +1,9 @@
 package org.LP.solver;
 
-public class GeneticSolverTest {
+public class GeneticSolverDistanceTest {
 
     public static void main(String[] args) {
-        double[][] A = { {258.59,6.98},
+        double[][] A = { {58.59,6.98},
                 {322.17,9.20},
                 {341.54,6.62},
                 {349.39,6.49},
@@ -87,7 +87,7 @@ public class GeneticSolverTest {
                 {146.03,3.72,3}
         };
 
-        GeneticSolver geneticSolver = new GeneticSolver();
-        double result = geneticSolver.GeneticSolver(C, D, 150, 30);
+        GeneticSolverDistance geneticSolverDistance = new GeneticSolverDistance();
+        double result = geneticSolverDistance.GeneticSolverDistance(C, D, 149, 30);
     }
 }

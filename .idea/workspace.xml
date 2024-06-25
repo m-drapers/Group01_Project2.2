@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7fd10f1-c798-4b24-987a-0f055be75486" name="Changes" comment="update a Junit test of Simplex Method">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverBudget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverBudgetTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverDistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverDistanceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,9 +82,9 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.GeneticSolverTest">
-    <configuration name="BranchAndBoundSortedArrayTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.LP.solver.BranchAndBoundSortedArrayTest" />
+  <component name="RunManager" selected="Application.GeneticSolverDistanceTest">
+    <configuration name="BranchAndBoundTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.LP.solver.BranchAndBoundTest" />
       <module name="Group01_Project2.2.app.main" />
       <extension name="coverage">
         <pattern>
@@ -96,8 +96,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BranchAndBoundTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.LP.solver.BranchAndBoundTest" />
+    <configuration name="GeneticSolverBudgetTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.LP.solver.GeneticSolverBudgetTest" />
+      <module name="Group01_Project2.2.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.LP.solver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GeneticSolverDistanceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.LP.solver.GeneticSolverDistanceTest" />
       <module name="Group01_Project2.2.app.main" />
       <extension name="coverage">
         <pattern>
@@ -135,19 +148,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="logicBasedSolverTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.LP.solver.logicBasedSolverTest" />
-      <module name="Group01_Project2.2.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.LP.solver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SimplexTest" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -174,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GeneticSolverBudgetTest" />
+        <item itemvalue="Application.GeneticSolverDistanceTest" />
+        <item itemvalue="Application.BranchAndBoundTest" />
         <item itemvalue="Application.LogicBasedSolverTest" />
         <item itemvalue="Application.GeneticSolverTest" />
-        <item itemvalue="Application.logicBasedSolverTest" />
-        <item itemvalue="Application.BranchAndBoundSortedArrayTest" />
-        <item itemvalue="Application.BranchAndBoundTest" />
       </list>
     </recent_temporary>
   </component>
@@ -225,6 +225,7 @@
       <workItem from="1719223636792" duration="1094000" />
       <workItem from="1719224815512" duration="341000" />
       <workItem from="1719239753169" duration="5691000" />
+      <workItem from="1719295068553" duration="7000000" />
     </task>
     <task id="LOCAL-00001" summary="a simple simplex solver, I use the exercise question to test">
       <option name="closed" value="true" />
@@ -287,9 +288,14 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverTest.java</url>
+          <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/GeneticSolverDistanceTest.java</url>
           <line>5</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/BranchAndBoundTest.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/org/LP/solver/LogicBasedSolverTest.java</url>
